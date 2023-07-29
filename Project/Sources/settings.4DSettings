@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="4">
+	<com.4d>
+		<web>
+			<standalone_server>
+				<configuration publish_at_startup="true"/>
+			</standalone_server>
+		</web>
+		<sql>
+			<publication allow_flash_player_requests="false"/>
+		</sql>
+		<compiler>
+			<options target="all"/>
+		</compiler>
+	</com.4d>
+</preferences>

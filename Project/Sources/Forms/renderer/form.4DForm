@@ -1,0 +1,95 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Eingabe": {
+					"type": "input",
+					"left": 18,
+					"top": 55,
+					"width": 819,
+					"height": 369,
+					"dataSourceTypeHint": "picture",
+					"dataSource": "mynewpicture",
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"method": "ObjectMethods/Eingabe.4dm"
+				},
+				"Eingabe1": {
+					"type": "input",
+					"left": 17,
+					"top": 16,
+					"width": 123,
+					"height": 17,
+					"dataSource": "Form:C1466.ID"
+				},
+				"Schaltfläche": {
+					"type": "button",
+					"text": "render",
+					"top": 10,
+					"left": 165,
+					"width": 98,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Schaltfläche.4dm"
+				},
+				"Schaltfläche1": {
+					"type": "button",
+					"text": "export",
+					"top": 10,
+					"left": 294,
+					"width": 98,
+					"height": 29,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Schaltfläche1.4dm"
+				}
+			}
+		}
+	],
+	"geometryStamp": 10,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

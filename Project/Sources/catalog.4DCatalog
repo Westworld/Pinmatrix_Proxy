@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="Pinball_proxy" uuid="026C82ACCA1343C9B619CDC3A94AD710" collation_locale="de">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Frames" uuid="3CC088B08C0E4FBD9926244BD9DEA5BC" id="1" prevent_journaling="true">
+		<field name="ID" uuid="CA81DCA0B9C24F2DA0358E8BF8217A3E" type="4" unique="true" autosequence="true" autogenerate="true" not_null="true" id="1"/>
+		<field name="TSmilli" uuid="88CBA483739E4EB0B5182C8BCF6370AE" type="4" id="2"/>
+		<field name="kind" uuid="1963FF4DF2314ACE8D2737FDD9B545A3" type="10" limiting_length="255" id="3"/>
+		<field name="data" uuid="689392E9180342A99E7E1F9056F4FAEF" type="18" id="4"/>
+		<primary_key field_name="ID" field_uuid="CA81DCA0B9C24F2DA0358E8BF8217A3E"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="10">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="196.47265625" top="89.28515625" width="125.03125" height="269.609375"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="7ABA20B56C3745BAAC3CC395F6DF159C" type="7">
+		<field_ref uuid="CA81DCA0B9C24F2DA0358E8BF8217A3E" name="ID">
+			<table_ref uuid="3CC088B08C0E4FBD9926244BD9DEA5BC" name="Frames"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:72.1.0" __keywordBuildingHash="icu:72.1.0">
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

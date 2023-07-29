@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>4D Web example</title>
+	    <style type="text/css">
+<!--
+h2 {
+	font: 16px Verdana, Arial, Helvetica, sans-serif;
+}
+p {
+	font: 12px Verdana, Arial, Helvetica, sans-serif;
+}
+-->
+        </style>
+        
+<script language="javascript" type="text/javascript">    
+var loc = window.location, new_uri;
+if (loc.protocol === "https:") {
+    new_uri = "wss:";
+} else {
+    new_uri = "ws:";
+}
+new_uri += "//" + loc.host;
+new_uri += "/ws"; 
+let socket = new WebSocket(new_uri);
+
+socket.onopen = function(e) {
+//  socket.send("browser connected");
+};
+
+socket.onmessage = function(event) {
+  //alert(`[message] Data received from server: ${event.data}`);
+   var myAnchor = document.getElementById("data");
+		  const newItem = document.createElement("span");
+		  newItem.innerHTML = event.data;
+		  myAnchor.replaceChild(newItem, myAnchor.firstChild);
+};
+
+socket.onclose = function(event) {
+  if (event.wasClean) {
+    //alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+  } else {
+    alert('[close] Connection died');
+  }
+};
+
+socket.onerror = function(error) {
+  alert(`[error]`);
+};
+
+
+		
+   const myUpdate = async () => {
+   		  var curValue = document.getElementById("source").value;
+		  socket.send(curValue);
+	}
+
+
+</script> 
+
+	</head>
+
+	<body bgcolor="#ffffff">
+		<div align="center"> 
+			<table border="0" cellpadding="0" cellspacing="0" width="675">
+			<tr>
+			  <td class="grayborder"> 
+				<h2 align="center">Web Socket example</h2>
+				<p align="center">Following data returned and inserted with Web Socket call:</p>
+				<p align="center" id="data">nothing yet.</p>
+			</tr>
+			</table>
+		</div>
+		<div align="center" ><input type="text" id="source"  onchange="myUpdate()">data to send</input></div>
+	</body>
+</html>

@@ -1,0 +1,157 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "Simple HTML test",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"text": "Use this window to test index.html - index3.html examples\rModify the value below to update the data in the browser.\r\rWhen you modify the data and click the update button in the browser, update will come asap. If you wait for timer, update will not appear up to 20 seconds, as it refresh on timer.",
+					"top": 11,
+					"left": 32,
+					"width": 367,
+					"height": 154,
+					"fontWeight": "bold"
+				},
+				"Eingabe": {
+					"type": "input",
+					"left": 128,
+					"top": 173,
+					"width": 151,
+					"height": 17,
+					"dataSource": "Form:C1466.data",
+					"method": "ObjectMethods/Eingabe.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"dataSourceTypeHint": "integer"
+				},
+				"Lineal": {
+					"type": "ruler",
+					"left": 24,
+					"top": 206,
+					"width": 362,
+					"height": 53,
+					"max": 100,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.data",
+					"labelsPlacement": "bottom",
+					"showGraduations": true,
+					"graduationStep": 10,
+					"method": "ObjectMethods/Lineal.4dm"
+				},
+				"Schaltfläche": {
+					"type": "button",
+					"text": "Open html1 example",
+					"top": 31,
+					"left": 462,
+					"width": 151,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Schaltfläche.4dm"
+				},
+				"Schaltfläche1": {
+					"type": "button",
+					"text": "Open html2 example",
+					"top": 119,
+					"left": 467,
+					"width": 151,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Schaltfläche1.4dm"
+				},
+				"Schaltfläche2": {
+					"type": "button",
+					"text": "Open html3 example",
+					"top": 224,
+					"left": 467,
+					"width": 151,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Schaltfläche2.4dm"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Very simple, data in browser refreshed when you click the button. The button sends a REST request (calling 4DAction/Rest_SendValue) which answers with content of Storage.web.data",
+					"top": 29,
+					"left": 638,
+					"width": 335,
+					"height": 108
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Entering a value or moving the ruler will set the value into Storage.web.data",
+					"top": 274,
+					"left": 32,
+					"width": 375,
+					"height": 46
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Data in browser refreshed with a JavaScript timer every 5 seconds or when you click the button. The button sends a REST request (calling 4DAction/Rest_SendValue) which answers with content of Storage.web.data",
+					"top": 113,
+					"left": 638,
+					"width": 335,
+					"height": 108
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Data in browser refreshed with a JavaScript timer every 5 seconds or when you click the button. The button sends a REST request (calling 4DAction/Rest_SendValue) which answers with content of Storage.web.data\rThe entry field allows to send the entered number back to 4D, to update the field/ruler in this form",
+					"top": 219,
+					"left": 638,
+					"width": 335,
+					"height": 123
+				}
+			}
+		}
+	],
+	"geometryStamp": 53,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}
