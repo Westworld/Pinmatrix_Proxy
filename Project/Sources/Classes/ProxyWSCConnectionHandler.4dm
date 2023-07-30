@@ -24,8 +24,13 @@ Function onMessage($ws : 4D:C1709.WebSocket; $event : Object)
 		hash:=$hash
 		Case of 
 			: ($message="gamename")
+				COPY BLOB:C558($event.data; $start; $pos+1; 0; BLOB size:C605($event.data)-($pos+1))
+				name:=Convert to text:C1012($start; "UTF-8")
 				CALL WORKER:C1389("Worker_Proxy_Server"; "Worker_Proxy_Server"; $message; $event.data)
 			: ($message="dimensions")
+				
+				COPY BLOB:C558($event.data; $start; $pos+1; 0; BLOB size:C605($event.data)-($pos+1))
+				dimension:=Convert to text:C1012($start; "UTF-8")
 				CALL WORKER:C1389("Worker_Proxy_Server"; "Worker_Proxy_Server"; $message; $event.data)
 			: ($message="color")
 				CALL WORKER:C1389("Worker_Proxy_Server"; "Worker_Proxy_Server"; $message; $event.data)

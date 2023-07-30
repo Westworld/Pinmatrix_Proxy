@@ -39,7 +39,7 @@
 				"Text": {
 					"type": "text",
 					"text": "receive:",
-					"top": 36,
+					"top": 40,
 					"left": 19,
 					"width": 90,
 					"height": 16
@@ -47,7 +47,7 @@
 				"Eingabe": {
 					"type": "input",
 					"left": 121,
-					"top": 37,
+					"top": 41,
 					"width": 138,
 					"height": 17,
 					"enterable": false,
@@ -86,11 +86,45 @@
 					"height": 17,
 					"enterable": false,
 					"dataSource": "duplicate"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "name:",
+					"top": 125,
+					"left": 19,
+					"width": 90,
+					"height": 16
+				},
+				"Eingabe3": {
+					"type": "input",
+					"left": 121,
+					"top": 125,
+					"width": 138,
+					"height": 17,
+					"enterable": false,
+					"dataSource": "name"
+				},
+				"Text4": {
+					"type": "text",
+					"text": "dimension:",
+					"top": 150,
+					"left": 19,
+					"width": 90,
+					"height": 16
+				},
+				"Eingabe4": {
+					"type": "input",
+					"left": 121,
+					"top": 150,
+					"width": 138,
+					"height": 17,
+					"enterable": false,
+					"dataSource": "dimension"
 				}
 			}
 		}
 	],
-	"geometryStamp": 13,
+	"geometryStamp": 20,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
